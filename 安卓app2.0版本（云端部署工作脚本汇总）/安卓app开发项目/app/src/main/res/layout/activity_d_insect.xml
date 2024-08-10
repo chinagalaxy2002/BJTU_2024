@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    >
+
+    <TextureView
+        android:id="@+id/textureView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/info_insect"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/info_insect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100px"
+        android:text="古韵新声"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/Rll_img"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/info_insect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/idImage"
+            android:layout_width="256dp"
+            android:layout_height="256dp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/add" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lin"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Rll_img">
+        <Button
+            android:id="@+id/btn_Select"
+            android:background="@drawable/shape"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="选择" />
+        <Button
+            android:id="@+id/btn_Detect"
+            android:background="@drawable/shape"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:onClick="onCapture_insect"
+            android:text="识别" />
+
+
+    </LinearLayout>
+
+   <TextView
+       android:id="@+id/txt_result"
+       android:text=""
+       android:textStyle="bold"
+       android:textColor="#B22222"
+       android:layout_below="@id/lin"
+       android:textSize="25sp"
+       android:layout_centerHorizontal="true"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+   </TextView>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+nohup: 忽略输入
+----------------- Options ---------------
+             aspect_ratio: 1.0                           
+               batch_size: 1                             
+          checkpoints_dir: ./checkpoints                 
+                crop_size: 256                           
+                 dataroot: webdata                       
+             dataset_mode: single                        
+                direction: AtoB                          
+          display_winsize: 256                           
+                    epoch: latest                        
+                     eval: False                         
+                  gpu_ids: -1                            
+                init_gain: 0.02                          
+                init_type: normal                        
+                 input_nc: 3                             
+                  isTrain: False                         	[default: None]
+                load_iter: 0                             	[default: 0]
+                load_size: 256                           
+         max_dataset_size: inf                           
+                    model: test                          
+             model_suffix:                               
+               n_layers_D: 3                             
+                     name: moben_pretrained              
+                      ndf: 64                            
+                     netD: basic                         
+                     netG: resnet_9blocks                
+                      ngf: 64                            
+               no_dropout: True                          
+                  no_flip: True                          
+                     norm: instance                      
+                 num_test: 50                            
+              num_threads: 0                             
+                output_nc: 3                             
+                    phase: test                          
+               preprocess: resize_and_crop               
+              results_dir: results/                      
+           serial_batches: True                          
+                   suffix:                               
+                use_wandb: False                         
+                  verbose: False                         
+       wandb_project_name: CycleGAN-and-pix2pix          
+----------------- End -------------------
+dataset [SingleDataset] was created
+initialize network with normal
+model [TestModel] was created
+loading the model from ./checkpoints/moben_pretrained/latest_net_G.pth
+---------- Networks initialized -------------
+[Network G] Total number of parameters : 11.378 M
+-----------------------------------------------
+ * Serving Flask app 'Server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:10010
+ * Running on http://10.0.8.8:10010
+[33mPress CTRL+C to quit[0m
+124.127.65.139 - - [01/Jul/2024 11:54:08] "POST / HTTP/1.1" 200 -
+124.127.65.139 - - [01/Jul/2024 11:54:10] "POST / HTTP/1.1" 200 -
+124.127.65.139 - - [01/Jul/2024 11:54:46] "POST / HTTP/1.1" 200 -
+180.101.244.12 - - [01/Jul/2024 17:47:44] "[31m[1mGET / HTTP/1.1[0m" 405 -
+220.196.160.61 - - [01/Jul/2024 17:47:52] "[31m[1mGET / HTTP/1.1[0m" 405 -
+59.83.208.103 - - [01/Jul/2024 17:47:53] "[31m[1mGET / HTTP/1.1[0m" 405 -
+124.127.65.139 - - [01/Jul/2024 21:00:31] "POST / HTTP/1.1" 200 -
+124.127.65.139 - - [01/Jul/2024 21:00:55] "POST / HTTP/1.1" 200 -
+185.234.216.112 - - [01/Jul/2024 21:38:37] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+185.234.216.112 - - [01/Jul/2024 21:38:37] "[35m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+220.196.160.73 - - [01/Jul/2024 23:24:45] "[31m[1mGET / HTTP/1.1[0m" 405 -
+205.210.31.241 - - [02/Jul/2024 06:16:28] "[31m[1mGET / HTTP/1.1[0m" 405 -
+180.101.244.14 - - [02/Jul/2024 06:51:35] "[31m[1mGET / HTTP/1.1[0m" 405 -
+220.196.160.61 - - [02/Jul/2024 06:51:35] "[31m[1mGET / HTTP/1.1[0m" 405 -
+180.101.244.13 - - [02/Jul/2024 06:51:36] "[31m[1mGET / HTTP/1.1[0m" 405 -
+205.210.31.4 - - [02/Jul/2024 13:59:23] "[31m[1mGET / HTTP/1.1[0m" 405 -

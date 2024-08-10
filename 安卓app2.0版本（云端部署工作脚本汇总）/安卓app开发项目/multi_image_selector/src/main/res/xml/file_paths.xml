@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <paths>
+        <external-path
+            name="external_storage_root"
+            path="." />
+        <!--name属性自行定义，只是个名称而已
+            path属性的值表示共享的具体位置，设置为空时表示共享整个SD卡，也可以指定对应的SD卡下的文件目录，根据需求自行定义-->
+    </paths>
+</resources>

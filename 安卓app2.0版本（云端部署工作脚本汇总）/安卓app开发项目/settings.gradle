@@ -1,0 +1,2 @@
+rootProject.name='FlaskClient'
+include ':app', ':multi_image_selector'

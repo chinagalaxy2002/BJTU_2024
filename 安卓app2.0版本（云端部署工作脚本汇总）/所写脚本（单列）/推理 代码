@@ -1,0 +1,2 @@
+python test.py --dataroot E:/BaiduNetdiskDownload/pytorch-CycleGAN-and-pix2pix-master/datasets/bibtex/moben/testA --name moben_pretrained --model test --no_dropout
+python test.py --dataroot webdata --name moben_pretrained --model test --no_dropout
